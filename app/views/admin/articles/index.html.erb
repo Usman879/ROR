@@ -1,0 +1,9 @@
+<h1>This is admin/article index page</h1>
+
+
+<% @articles.each do |article| %>
+    <h2><%= article.title %> </h2>
+    <div><%= truncate(article.body, :length => 35) %></div>
+    <br>
+
+<% end %>

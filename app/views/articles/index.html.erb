@@ -1,0 +1,9 @@
+<h1>this is index page articles</h1>
+
+<% @articles.each do |article| %>
+    <h2><%= link_to article.title, article %> </h2>
+    <div><%= truncate(article.body, :length => 35) %></div>
+    <br>
+    <%= link_to "Read Article", article %>
+    <hr>
+<% end %>

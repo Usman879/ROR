@@ -2,7 +2,7 @@ class PostsController < ApplicationController
 before_action :find_post, only: [:show, :edit, :update, :destroy]
 
   def index
-    @posts=Post.order("created_at")
+    @posts=Post.order("created_at DESC")
   end
 
   def new
@@ -12,7 +12,7 @@ before_action :find_post, only: [:show, :edit, :update, :destroy]
   def create
     @post=Post.new(post_params)
     if @post.save
-      redirect_to @post
+      redirect_to @posts_path
     else
       render 'new'
     end
