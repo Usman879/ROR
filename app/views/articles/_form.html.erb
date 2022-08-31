@@ -1,5 +1,5 @@
 
-<%= form_for [:admin, @article] do |f| %>
+<%= form_for [@article] do |f| %>
     <%= f.label :title %><br>
     <%= f.text_field :title %><br>
     <br>
@@ -9,3 +9,4 @@
     <%= f.submit %>
 
     <% end %>
+    

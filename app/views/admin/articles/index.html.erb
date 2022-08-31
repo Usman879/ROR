@@ -5,5 +5,7 @@
     <h2><%= article.title %> </h2>
     <div><%= truncate(article.body, :length => 35) %></div>
     <br>
+    <%= link_to "Read Article", @article_admin%>
+    <hr>
 
 <% end %>

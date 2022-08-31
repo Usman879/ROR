@@ -12,7 +12,7 @@ before_action :find_post, only: [:show, :edit, :update, :destroy]
   def create
     @post=Post.new(post_params)
     if @post.save
-      redirect_to @posts_path
+      redirect_to posts_path
     else
       render 'new'
     end

@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(post_params)
     if @article.save
-      redirect_to @article_path
+      redirect_to admin_article_path
     else
       render 'new'
     end
@@ -28,7 +28,7 @@ class ArticlesController < ApplicationController
   def update
     
     if @article.update(post_params)
-      redirect_to @article
+      redirect_to admin_article_path
     else
       render 'edit'
     end

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  # resources :posts
-  # root 'posts#index'
+  devise_for :admin_users
+  # resources :projects
+  resources :posts
+  root 'posts#index'
 
 # get '/posts' => 'post#index'
 # get '/posts/:id' => 'post#show', as: 'post'
@@ -14,8 +16,8 @@ Rails.application.routes.draw do
 
 # FOR ADMIN/ARTICLES
     
-        # resources :articles
-      # root 'articles#index'
+    #    resources :articles
+    #    root 'articles#index'
     
     namespace :admin do
       resources :articles  
